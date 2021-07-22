@@ -5,12 +5,12 @@ from django.db import models
 class ShowManager(models.Manager):
     def basic_validator(self, postData):
         errors = {}
-        # if len(data['title']) < 2:
-        #     errors['title'] = 'Show title must be at least 2 characters'
-        # if len(data['network']) < 3:
-        #     errors['network'] = 'Network must be at least 3 characters'
-        # if len(data['description']) < 5 and len(data['description']) != 0:
-        #     errors['description'] = 'Show description must be at least 10 characters'
+        if len(postData['title']) < 2:
+            errors['title'] = 'Show title must be at least 2 characters'
+        if len(postData['network']) < 3:
+            errors['network'] = 'Network must be at least 3 characters'
+        if len(postData['description']) < 5 and len(postData['description']) != 0:
+            errors['description'] = 'Show description must be at least 10 characters'
         return errors
 
 
