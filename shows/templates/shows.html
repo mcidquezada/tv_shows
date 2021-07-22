@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-8 sm-6 offset-2">
+            <h3>All shows</h3><br>
+            <div class="card p-3">
+                <h5 class="card-title my-2 text-center"></h5>
+                <table class="table">
+                    <thead>
+                        <tr class='text-success'>
+                            <th scope="col">id</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Network</th>
+                            <th scope="col">Release date</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for show in shows %}
+                        <tr>
+                            <td scope="row">{{show.id}}</td>
+                            <td>{{show.title}}</td>
+                            <td>{{show.network}}</td>
+                            <td>{{show.release_date}}</td>
+                            <td><a href="shows/{{show.id}}">View</a> - <a href="shows/{{show.id}}/edit">Edit</a> - <a href="shows/{{show.id}}/destroy">Delete</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <br>
+                <a href="shows/new">Add a New Show</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All shows</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+        {% load static %}	
+</head>
+
+<body>
+    <div class="container-fluid">
+        
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Network</th>
+                    <th scope="col">Release Date</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Stranger Things</td>
+                    <td>Netflix</td>
+                    <td>July 15, 2016</td>
+                    <td> <a href="/shows/id">Show</a>| <a href="/shows/id/edit">Edit|</a><a href="">Delete</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Bronklyn Nine-Nine</td>
+                    <td>NBC</td>
+                    <td>September 17 ,2013</td>
+                    <td> <a href="/shows/id">Show</a>| <a href="/shows/id/edit">Edit|</a><a href="">Delete</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td> Game of Throne</td>
+                    <td>HBO</td>
+                    <td>April 17, 2011 </td>
+                    <td> <a href="/shows/id">Show</a>| <a href="/shows/id/edit">Edit|</a><a href="">Delete</a></td>  
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="/shows/new">Add a new shows</a>
+    </div>
+
+</body>
+
+</html> -->
+

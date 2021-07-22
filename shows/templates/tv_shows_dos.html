@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-8 sm-6 offset-2">
+            <h3>TV Show {{shows.id}}</h3>
+            <a href="/">Go back</a><br><br>
+            <div class="card p-3">
+                <h5 class="card-title my-2 text-center"></h5>
+                <h6>Title: {{shows.title}}</h6>
+                <h6>Network: {{shows.network}}</h6>
+                <h6>Release date: {{shows.release_date}}</h6>
+                <h6>Description: {{shows.description}}</h6><br>
+                <h6>Last updated: {{shows.updated_at}}</h6>
+                <p><a href="/shows/{{shows.id}}/edit">Edit</a> | <a href="/shows/{{shows.id}}/destroy">Delete</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV shows 2</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="edit">
+            <h3>Title:</h3>
+            <h3>Network:</h3>
+            <h3>Release Date:</h3>
+            <h3> Description:</h3>
+
+        </div>
+
+
+    </div>
+</body>
+</html> -->
